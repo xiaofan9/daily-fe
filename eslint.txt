@@ -1,0 +1,4 @@
+
+cnpm i eslint babel-eslint eslint-config-standard eslint-plugin-standard eslint-config-vue eslint-plugin-vue eslint-friendly-formatter eslint-loader eslint-plugin-html eslint-plugin-import eslint-plugin-node  eslint-plugin-promise -g
+
+cnpm uni eslint babel-eslint eslint-config-standard eslint-plugin-standard eslint-config-vue eslint-plugin-vue eslint-friendly-formatter eslint-loader eslint-plugin-html eslint-plugin-import eslint-plugin-node  eslint-plugin-promise -g

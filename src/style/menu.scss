@@ -1,0 +1,111 @@
+@import "common";
+#menu {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  .menu-content {
+    transition: transform 0.3s ease-in-out;
+    will-change: transform;
+    transform: translate3d(px2rem(-250px), 0, 0);
+    width: px2rem(250px);
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 9;
+    overflow: hidden;
+    p.web-hint {
+      height: 80px;
+      line-height: 80px;
+      text-indent: 16px;
+      background: #00a2ed;
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 0 !important;
+      width: 100%;
+      color: #fff;
+      font-size: 17px;
+      .auth {
+        position: absolute;
+        bottom: 9px;
+        right: 9px;
+        font-size: 15px;
+        line-height: 15px;
+        color: #fff;
+      }
+    }
+    .item-lists {
+      background: #fdf7f7;
+      overflow: auto;
+      width: 100%;
+      position: absolute;
+      top: 80px;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      padding: 0;
+      li {
+        &.active {
+          background: #f0f0f0;
+        }
+        a {
+          height: px2rem(44px);
+          line-height: px2rem(44px);
+          text-indent: 16px;
+          color: #000;
+          width: 100%;
+          display: inline-block;
+          font-size: 18px;
+          &.home {
+            &:before {
+              content: "";
+              position: absolute;
+              top: px2rem(11px);
+              left: px2rem(22px);
+              background: url(../assets/home.png) no-repeat;
+              background-size: cover;
+              width: px2rem(20px);
+              height: px2rem(20px);
+            }
+            color: #00a2ed;
+            text-indent: 56px;
+            position: relative;
+          }
+        }
+      }
+    }
+  }
+  &.menu-show {
+    .menu-content {
+      transform: translate(0, 0);
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+  .menu-bg {
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    &.menu-bg-show {
+      z-index: 8;
+      opacity: 1;
+    }
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: px2rem(-252px);
+    bottom: 0;
+    background: #fff;
+    width: px2rem(252px);
+    z-index: 19;
+  }
+}

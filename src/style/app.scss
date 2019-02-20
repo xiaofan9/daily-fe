@@ -1,0 +1,95 @@
+@import "common";
+
+body {
+  // 默认字体大小 14px
+  font-size: px2rem(16px);
+  font-family: "华文楷体";
+
+  #app {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    header.common {
+      background: #00a2ed;
+      height: 50px;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      max-width: 540px;
+      width: 100%;
+
+      @media screen and (min-width: 540px) {
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+    }
+
+    .top_theme {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      top: 0;
+      left: 0;
+
+      img.top_theme-bg {
+        width: 100%;
+        margin-top: -30%;
+      }
+
+      .top_theme-title {
+        position: absolute;
+        bottom: 30px;
+        font-size: 22px;
+        color: #fff;
+        z-index: 3;
+        left: 20px;
+        right: 20px;
+        margin: 0 !important;
+      }
+
+      .top_theme-image_source {
+        position: absolute;
+        z-index: 3;
+        color: #f0f0f0;
+        bottom: 8px;
+        right: 16px;
+        font-size: 16px;
+      }
+
+      &:after {
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        height: 200px;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.4);
+      }
+    }
+  }
+
+  span.select-hint {
+    line-height: 50px;
+    position: absolute;
+    left: 50px;
+    top: 0;
+    font-size: 18px;
+    color: #fff;
+  }
+
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 0.5s;
+  }
+
+  .fade-enter,
+  .fade-leave-active {
+    opacity: 0;
+  }
+}
